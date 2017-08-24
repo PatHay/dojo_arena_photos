@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#characters').hide();
+            $('#earth').hover(function () {
+                $('#wrapper').css("background-image", "url(earth.jpg)");
+            });
+            $('#beach').hover(function () {
+                $('#wrapper').css("background-image", "url(beach.jpg)");
+            });
+            $('#dojo').hover(function () {
+                $('#wrapper').css("background-image", "url(dojo.jpg)");
+            });
+            $('#forest').hover(function () {
+                $('#wrapper').css("background-image", "url(forest.jpg)");
+            });
+            $('#matrix').hover(function () {
+                $('#wrapper').css("background-image", "url(matrix.jpg)");
+            });
+            $('#snow').hover(function () {
+                $('#wrapper').css("background-image", "url(snow.jpg)");
+            });
+            $('button').click(function () {
+                $('#buttonbox').hide();
+                var x = "<div id='characters'><select name='turtle1' id='turtle1'>"
+                +"<option value='p1'>Player 1</option><option value='donny.png'>Donny</option>"
+                +"<option value='leo.png'>Leo</option><option value='raphael.png'>Raphael</option>"
+                +"<option value='mikey.png'>Mikey</option></select>"
+                +"<select name='turtle2' id='turtle2'><option value= 'p2'>Player 2</option>"
+                +"<option value='donny.png'>Donny</option><option value='leo.png'>Leo</option>"
+                +"<option value='raphael.png'>Raphael</option><option value='mikey.png'>Mikey</option>"
+                +"</select></div><img src='' alt='player 1 selected' id='ninja1'>"
+                +"<img src='' alt='player 2 selected' id='ninja2'>";
+                $('#wrapper').append(x);
+                // $('#characters').show();
+            })
+            $(document).on('click', 'select', function(){
+                $('#turtle1').change(function(){
+                var turtlepic = $('#turtle1').val();
+                $('#ninja1').attr('src', turtlepic);
+            });
+            $('#turtle2').change(function(){
+                var turtlepic = $('#turtle2').val();
+                $('#ninja2').attr('src', turtlepic);
+            });
+            });
+        });
+    </script>
+</head>
+
+<body id="wrapper">
+        <p id="buttonbox">
+            <button id="earth" class="arena">earth</button>
+            <button id="beach" class="arena">beach</button>
+            <button id="dojo" class="arena">dojo</button>
+            <button id="forest" class="arena">forest</button>
+            <button id="matrix" class="arena">matrix</button>
+            <button id="snow" class="arena">snow</button>
+        </p>
+</body>
+
+</html>

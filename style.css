@@ -1,0 +1,49 @@
+#wrapper{
+    background-size: cover;
+    height: 1000px;
+    text-align: center;
+}
+/* #arenaselection{
+    margin: auto;
+    align-items: middle;
+    padding: 100px 0px 0px 100px;
+} */
+#buttonbox{
+    margin: auto;
+    height: 30px;
+    width: 400px;
+    border: 5px solid black;
+    justify-content: space-around;
+    background-color: silver;
+    margin-top: 76px;
+    
+}
+.arena{
+    height: 20px;
+    width: 50px;
+}
+#characters{
+    margin: auto;
+    height: 30px;
+    width: 400px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-around;
+    background-color: silver;
+    margin-top: 76px;
+    text-align: center;
+    
+}
+#ninja1{
+    height: 100px;
+    width: 100px;
+    margin-top: 200px;
+    display: inline-block;
+}
+#ninja2{
+    height: 100px;
+    width: 100px;
+    margin-left: 200px;
+    display: inline-block;
+    margin-top: 200px;
+}  
